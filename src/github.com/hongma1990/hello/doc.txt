@@ -1,2 +1,9 @@
 学习资料
 https://go101.org/article/101.html
+
+Had the same issue. I solved it with these steps. Plain re-install didn't work. Tried both through package control and git clone.
+
+Remove GoSublime Package (either using package control or manual)
+Find out where gosublime/gosublime.go:4:2 exists. For me this was in $HOME/Library/Application Support/Sublime Text 3/Packages/User/GoSublime/src/gosublime .go (Did a find in $HOME find . -name 'gosublime.go')
+Remove all GoSublime related things in ``$HOME/Library/Application Support/Sublime Text 3/Packages/User/`. I guess these are user related stuff and hence not deleted when GoSublime package is removed
+Re-install GoSublime Package

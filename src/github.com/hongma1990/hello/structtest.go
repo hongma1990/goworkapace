@@ -36,6 +36,9 @@ func (w *Worker) EatWhat() {
 
 func main() {
 	kevin := Student{Human: Human{name: "kevin", age: 18}, grade: 4, phone: "13800138000"}
+	var kevin2 Student
+	kevin2.name = "kevin2"
+	fmt.Println("kevin2:", kevin2)
 	fmt.Println("kevin.name:", kevin.name)
 	fmt.Println("kevin.Human.name:", kevin.Human.name)
 	kevin.Human.phone = "10086"

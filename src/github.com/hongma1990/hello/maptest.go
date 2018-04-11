@@ -6,15 +6,20 @@ import (
 )
 
 func main() {
-	var numbers map[string]int
-	numbers = make(map[string]int)
-	numbers["one"] = 1
-	numbers["two"] = 2
+	type T struct {
+		age string
+	}
+	ma := map[string]T{}
+	ma["John"] = T{age: "23"}
 
-	fmt.Printf(len(numbers))
+	ml := map[string]string{
+		"1": "one",
+	}
 
-	value, ok := numbers["one1"]
+	fmt.Println(ma)
+	fmt.Println(ml)
 
-	fmt.Printf(string(value) + "\n")
-	fmt.Print(ok)
+	ma["John"] = T{age: "96"}
+
+	fmt.Println(ma)
 }
